@@ -33,6 +33,18 @@ void GenerateMap() {
 		SmoothMap();
 	}
 
+	int borderSize = 5;
+		int[,] borderedMap = new int[width + borderSize * 2,height + borderSize * 2];
+
+		for (int x = 0; x < borderedMap.GetLength (0); x++) {
+			for (int y = 0; y < height; y++) {
+				if (x >= borderSize && x < width + borderSize && y >= borderSize && y < height + borderSize) {
+					//RIGHT THERE 5 MINS
+
+				}
+			}
+		}
+
 		MeshGenerator meshGen = GetComponent<MeshGenerator>();
 		meshGen.GenerateMesh(map, 1);
 }
